@@ -1,4 +1,4 @@
-describe('index.js', function () {
+describe('index.js', function (done) {
   describe('drivers', function () {
     it('is assigned an initial value of ["Milo", "Otis", "Garfield"]', function () {
       expect(drivers).to.have.ordered.members(["Milo", "Otis", "Garfield"]);
@@ -12,7 +12,7 @@ describe('index.js', function () {
       drivers.push('Milo', 'Otis', 'Garfield');
     });
 
-    describe('destructivelyAppendDriver(name)', function () {
+    describe('destructivelyAppendDriver(name)', function (done) {
       it('appends a driver to the end of the drivers array', function () {
         destructivelyAppendDriver('Ralph');
 
@@ -20,7 +20,7 @@ describe('index.js', function () {
       });
     });
 
-    describe('destructivelyPrependDriver(name)', function () {
+    describe('destructivelyPrependDriver(name)', function (done) {
       it('prepends a driver to the beginning of the drivers array', function () {
         destructivelyPrependDriver("Bob");
 
@@ -28,7 +28,7 @@ describe('index.js', function () {
       });
     });
 
-    describe('destructivelyRemoveLastDriver()', function () {
+    describe('destructivelyRemoveLastDriver()', function (done) {
       it('removes the last driver from the drivers array', function () {
         destructivelyRemoveLastDriver();
 
@@ -36,7 +36,7 @@ describe('index.js', function () {
       });
     });
 
-    describe('destructivelyRemoveFirstDriver()', function () {
+    describe('destructivelyRemoveFirstDriver()', function (done) {
       it('removes the First driver from the drivers array', function () {
         destructivelyRemoveFirstDriver();
 
@@ -44,7 +44,7 @@ describe('index.js', function () {
       });
     });
 
-    describe('appendDriver(name)', function () {
+    describe('appendDriver(name)', function (done) {
       it('appends a driver to the drivers array and returns a new array, leaving the drivers array unchanged', function () {
         expect(appendDriver("Broom")).to.have.ordered.members(["Milo", "Otis", "Garfield", "Broom"]);
 
@@ -52,7 +52,7 @@ describe('index.js', function () {
       });
     });
 
-    describe('prependDriver(name)', function () {
+    describe('prependDriver(name)', function (done) {
       it('prepends a driver to the drivers array and returns a new array, leaving the drivers array unchanged', function () {
         expect(prependDriver("Arnold")).to.have.ordered.members(["Arnold", "Milo", "Otis", "Garfield"]);
 
