@@ -1,18 +1,21 @@
-describe('index.js', function (done) {
+describe('index.js', function () {
   describe('drivers', function () {
+    this.timeout(0)
     it('is assigned an initial value of ["Milo", "Otis", "Garfield"]', function () {
       expect(drivers).to.have.ordered.members(["Milo", "Otis", "Garfield"]);
     });
   });
 
   describe('Array functions', function () {
+    this.timeout(0)
     beforeEach(function () {
       drivers.length = 0;
 
       drivers.push('Milo', 'Otis', 'Garfield');
     });
 
-    describe('destructivelyAppendDriver(name)', function (done) {
+    describe('destructivelyAppendDriver(name)', function () {
+      this.timeout(0)
       it('appends a driver to the end of the drivers array', function () {
         destructivelyAppendDriver('Ralph');
 
@@ -20,7 +23,8 @@ describe('index.js', function (done) {
       });
     });
 
-    describe('destructivelyPrependDriver(name)', function (done) {
+    describe('destructivelyPrependDriver(name)', function () {
+      this.timeout(0)
       it('prepends a driver to the beginning of the drivers array', function () {
         destructivelyPrependDriver("Bob");
 
@@ -28,7 +32,8 @@ describe('index.js', function (done) {
       });
     });
 
-    describe('destructivelyRemoveLastDriver()', function (done) {
+    describe('destructivelyRemoveLastDriver()', function () {
+      this.timeout(0)
       it('removes the last driver from the drivers array', function () {
         destructivelyRemoveLastDriver();
 
@@ -36,7 +41,8 @@ describe('index.js', function (done) {
       });
     });
 
-    describe('destructivelyRemoveFirstDriver()', function (done) {
+    describe('destructivelyRemoveFirstDriver()', function () {
+      this.timeout(0)
       it('removes the First driver from the drivers array', function () {
         destructivelyRemoveFirstDriver();
 
@@ -44,7 +50,8 @@ describe('index.js', function (done) {
       });
     });
 
-    describe('appendDriver(name)', function (done) {
+    describe('appendDriver(name)', function () {
+      this.timeout(0)
       it('appends a driver to the drivers array and returns a new array, leaving the drivers array unchanged', function () {
         expect(appendDriver("Broom")).to.have.ordered.members(["Milo", "Otis", "Garfield", "Broom"]);
 
@@ -52,7 +59,8 @@ describe('index.js', function (done) {
       });
     });
 
-    describe('prependDriver(name)', function (done) {
+    describe('prependDriver(name)', function () {
+      this.timeout(0)
       it('prepends a driver to the drivers array and returns a new array, leaving the drivers array unchanged', function () {
         expect(prependDriver("Arnold")).to.have.ordered.members(["Arnold", "Milo", "Otis", "Garfield"]);
 
@@ -61,6 +69,7 @@ describe('index.js', function (done) {
     });
 
     describe('removeLastDriver()', function () {
+      this.timeout(0)
       it('removes the last driver in the drivers array and returns a new array, leaving the drivers array unchanged', function () {
         expect(removeLastDriver()).to.have.ordered.members(["Milo", "Otis"]);
 
@@ -69,6 +78,7 @@ describe('index.js', function (done) {
     });
 
     describe('removeFirstDriver()', function () {
+      this.timeout(0)
       it('removes the first driver from the drivers array and returns a new array, leaving the drivers array unchanged', function () {
         expect(removeFirstDriver()).to.have.ordered.members(["Otis", "Garfield"]);
 
